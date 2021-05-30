@@ -1,0 +1,189 @@
+<!--Rhythm: A music app-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rhythm</title>
+    <script src="https://kit.fontawesome.com/9d546e403f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <nav class="navbar">
+            <div id="menu"><i id="menu-button" class="fas fa-bars"></i></div>
+            <h3 class="header">RHYTHM</h3>
+            <div id="love"><i class="fa fa-heart-o"></i></div>
+        </nav>
+        <div class="cover-art">
+            <img id = "art" class = '' src="https://upload.wikimedia.org/wikipedia/en/d/da/Alan_Walker_-_Faded.png" alt="Track Cover" height="200px" width="200px">
+        </div>
+        <div class="cover-details">
+            <h2 id="title">Faded</h2>
+            <h4 id="singer">Alan Walker</h4>
+        </div>
+
+        <div class="cover-controls">
+            <div class="cover-buttons">
+                <li id= "back" class="backward fa fa-step-backward fa-2x"></li>
+
+                <li id = "play" class="playing show state">
+                    <div id = "play-button" class="play">
+                        <i class = "fa fa-play fa-2x"></i>
+                    </div>
+                </li>
+                <li id="pause" class="pausing state">
+                    <div id = "pause-button" class="pause">
+                        <i class="fas fa-pause fa-2x"></i>
+                    </div>
+                </li>
+
+                <audio id = "audio" src="track-1.mp3"></audio>
+                <li id = "forward" class="forward fa fa-step-forward fa-2x"></li>
+            </div>
+           <div class="timer">
+             <div class="count">
+                <i id="current">00:00</i>
+                <i id="duration">00:00</i>
+             </div>
+             <div id="range" class="range"></div>
+             <div id="range-complete" class="range-complete"></div>
+             
+           </div>
+            
+        </div>
+
+        <div id="side" class="sidebar">        
+            <div id="song-screen" class="screen song-list footer-show">
+                <div class="songlist-nav">
+                    <div><i id= "close" class="fas fa-times"></i></div>
+                    <div id="menu-name"><h3>Songs</h3></div>
+                </div>
+                <div class="sorting">
+                    <nav class="sort-type">
+                        <li class="sorting-active">Song</li>
+                        <li class="">Artist</li>
+                        <li>Genres</li>
+                        <li>Album</li>
+                    </nav>
+                </div>
+                <div id= 'list' class="songs">
+                <!--<ul id = "refer" class="song-details">
+                        <img id = "referimg" src="#" alt="c">
+                        <div class="details">
+                            <h5 id = "refertitle">Faded</h5>
+                            <p id = "referartist">Alan Walker</p>
+                        </div>
+                        <audio id= "musix" src="track-1.mp3"></audio>
+                    </ul> -->
+                    
+                </div>
+
+
+            </div>
+            <div id="fav-screen" class="screen favourites">
+                <div class="fav-header">
+                    <div class="fav-close"><i  id="favclose" class="fas fa-times"></i></div>
+                    <div class="fav-title"><h3>Favourites</h3></div>
+                </div>
+             
+                <ul class="favlist">
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                    <ul class="song-details">
+                        <img src="#" alt="c">
+                        <div class="details">
+                            <h5>Song name</h5>
+                            <p>Artist</p>
+                        </div>
+                    </ul>
+                </ul>
+
+            </div>
+            <div id="search-screen" class="screen search-tab">
+                <div class="search-header">
+                    <div class= "search-close"><i id="sclose" class="fas fa-times"></i></div>
+                    <div class="search-title"><h3>Search</h3></div>
+                </div>
+                
+                <div class="search-function">
+                    <input id = 'search-input' class="" type="text" placeholder="Search a song...">
+                    <div id="cancel" class="erase" ><p>X</p></div>
+                </div>
+            </div>
+            <div class="player player-show">
+                <img id = "cover-img" src="https://upload.wikimedia.org/wikipedia/en/d/da/Alan_Walker_-_Faded.png" alt="c" height="40px" width="40px">
+                <div class="details">
+                    <h5 id= "cover-title" >Faded</h5>
+                    <p id= "cover-sing">Alan Walker</p>
+                </div>
+                <div class="player-controls">
+                    <li id= 'earlier' class="fa fa-step-backward"></li>
+                    <li id= 'run' class="far fa-play-circle display bottom"></li>
+                    <li id= 'stop' class="fas fa-pause bottom"></li>
+                    <li id= 'later' class="fa fa-step-forward"></li>
+                </div>
+                
+            </div> 
+            <div class="footer">
+                <div class="footer-details">
+                    <li class="item"><i id= "tab-1" class="inneritem fas fa-music fa-2x footer-active"><p>Songs</p></i></li>
+                    <li class="item"><i id= "tab-2" class="inneritem fa fa-heart-o fa-2x"><p>Favourites</p></i></li>
+                    <li class="item"><i id= "tab-3" class="inneritem fas fa-search fa-2x"><p>Search</p></i></li>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
